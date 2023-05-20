@@ -32,57 +32,52 @@
             </nav>
         </div>
     </header>
+
+    <section>
+        <div id="slider">
+            <img class="selected" src="./images/soon-like-1.jpg" alt="Soon Like" />
+            <img src="./images/soon-like-2.jpg" alt="Soon Like" />
+            <img src="./images/soon-like-3.jpg" alt="Soon Like" />
+        </div>
+    </section>
+
     <section id="about">
         <div class="container">
             <div class="content-wrapper">
-            <img class="soon-like" src="./images/soon-like.jpg" alt="Soon Like" />
-            
-                <h2>
-                    Minha História
-                </h2>
-                
-                <div class="font-size">
-                    <p>
-                        Olá, sou Klebson Emmanuel Ferreira, engenheiro civil e tatuador.
-                    </p>
-                    <p>
-                        Tenho 42 anos e trabalho na área da construção civil desde 2006,
-                        como técnico em edificações e projetista. Formei-me em engenharia civil em meados de 2016
-                        e desde então busco aprimorar meus conhecimentos e habilidades nesse ramo.
-                    </p>
-                    <p>
-                        Além da construção civil, tenho outra paixão: a tatuagem. Desde adolescente,
-                        admirava muito os cantores das bandas de rock preferidas, pois a maioria eram tatuados,
-                        sonhava em ser tatuado e expressar minha arte na pele.
-                        Hoje, posso dizer que realizei esse sonho e também me tornei um tatuador.
-                        Ainda estou no início da minha jornada como tatuador, mas sou dedicado e
-                        comprometido em entregar o melhor trabalho possível para os meus clientes.
-                    </p>
-                    <p>
-                        A tatuagem é uma forma de arte que exige criatividade, técnica e responsabilidade.
-                        Por isso, procuro sempre me atualizar sobre as novidades e tendências do mercado,
-                        além de seguir as normas de biossegurança e higiene. Meu objetivo é oferecer
-                        um serviço de qualidade, com atendimento personalizado e preço justo. Se você
-                        está procurando um profissional qualificado e apaixonado pela tatuagem,
-                        entre em contato comigo e agende seu horário. Estou à disposição para tirar
-                        suas dúvidas e fazer o seu orçamento.
-                    </p>
-                    <p>
-                        Venha conhecer o meu trabalho e fazer parte da minha história como tatuador.
-                    </p>
+                <h2>Minha História</h2>
 
-                <ul class="brands-list">
-                    <li><img src="./images/tattoo-machine.png" alt="Logo Tattoo" /></li>
-                </ul>
+                <div class="font-size">
+                    <p>Olá, sou Klebson Emmanuel Ferreira, engenheiro civil e tatuador.</p>
+                    <p>Tenho 42 anos e trabalho na área da construção civil desde 2006,
+                    como técnico em edificações e projetista. Formei-me em engenharia civil em meados de 2016
+                    e desde então busco aprimorar meus conhecimentos e habilidades nesse ramo.</p>
+                    <p>Além da construção civil, tenho outra paixão: a tatuagem. Desde adolescente,
+                    admirava muito os cantores das bandas de rock preferidas, pois a maioria eram tatuados,
+                    sonhava em ser tatuado e expressar minha arte na pele.
+                    Hoje, posso dizer que realizei esse sonho e também me tornei um tatuador.
+                    Ainda estou no início da minha jornada como tatuador, mas sou dedicado e
+                    comprometido em entregar o melhor trabalho possível para os meus clientes.</p>
+                    <p>A tatuagem é uma forma de arte que exige criatividade, técnica e responsabilidade.
+                    Por isso, procuro sempre me atualizar sobre as novidades e tendências do mercado,
+                    além de seguir as normas de biossegurança e higiene. Meu objetivo é oferecer
+                    um serviço de qualidade, com atendimento personalizado e preço justo. Se você
+                    está procurando um profissional qualificado e apaixonado pela tatuagem,
+                    entre em contato comigo e agende seu horário. Estou à disposição para tirar
+                    suas dúvidas e fazer o seu orçamento.</p>
+                    <p>Venha conhecer o meu trabalho e fazer parte da minha história como tatuador.</p>
+                    
+                    <ul class="brands-list">
+                        <li><img src="./images/tattoo-machine.png" alt="Logo Tattoo" /></li>
+                    </ul>
+                </div>
+                
             </div>
         </div>
-        </div>
     </section>
+
     <section id="contact">
         <div class="container">
-            <h2>
-                Contato
-            </h2>
+            <h2>Contato</h2>
             <div class="contact-methods">
                 <div>
                     <h3>Agende a sua Visita</h3>
@@ -105,31 +100,65 @@
                 </div>
                 <div>
                     <h3>Localização</h3>
-                    <p>
-                        Rua Santa Luzia, bairro São José, Aracaju-SE
-                    </p>
+                    <p>Rua Santa Luzia, bairro São José, Aracaju-SE</p>
                 </div>
             </div>
         </div>
     </section>
+
     <footer>
         <div class="container">
-            <p>
-                &copy; 2023 "In The End" (INSTRUMENTAL) Linkin Park Cinematic Cover / Produced by Tommee Profitt - Todos os direitos reservados - Página em construção <audio class="audio" src="./music/in-the-end.mp3" autoplay></audio>
-            </p>
+            <p>&copy; 2023 "In The End" (INSTRUMENTAL) Linkin Park Cinematic Cover / Produced by Tommee Profitt - Todos os direitos reservados - Página em construção <audio class="audio" src="./music/in-the-end.mp3" autoplay></audio></p>
         </div>
     </footer>
+
     <script src="main.js"></script>
     <script>
         document.addEventListener('click', function() {
-        const audioElement = document.querySelector('.audio');
+            const audioElement = document.querySelector('.audio');
 
-        if (audioElement.paused) {
-        audioElement.play();
-        } else {
-        audioElement.pause();
-        }
+            if (audioElement.paused) {
+                audioElement.play();
+            } else {
+                audioElement.pause();
+            }
         })
     </script>
+    <script>
+        let time = 4000, //tempo para troca de imagem = 4segundos
+    currentImageIndex = 0, // index da imagem
+    images = document
+                .querySelectorAll('#slider img') // pegando a imagem
+    max = images.length; // quantidade máxima é igual a quantidade total de imagens existentes
+
+    // função de troca de imagem
+    function nextImage() {
+
+        images[currentImageIndex]
+            .classList.remove('selected') // começa removendo a class selected da 1a imagem
+        
+        currentImageIndex++ // acrescenta a imagem até chegar em seu total,
+                            // porém para não gerar um erro/loop sem que tenha mais que o total de imagens exist
+                            // é necessário criar uma regra, por isso o if a seguir   
+        
+        if (currentImageIndex >= max) // se o index da imagem atual for mais ou igual ao total de imagens existentes
+        currentImageIndex = 0         // o index volta para posição 0
+        
+        // adc class para prox imagem
+
+        images[currentImageIndex]
+            .classList.add('selected')
+    }
+
+    function start() {
+        //executa a função 'nextImage' a cada momento(neste caso, a cada 2000s/variavel time)
+        setInterval(() => {
+            nextImage()
+        }, time)
+    }
+
+    window.addEventListener('load', start) // a função start começa assim que inicia/carrega a aplicação
+    </script>
+
 </body>
 </html>

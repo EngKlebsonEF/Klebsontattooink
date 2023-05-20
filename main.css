@@ -15,6 +15,7 @@ body,
 input,
 textarea {
     font-family: 'Bungee', cursive;
+
 }
 
 header {
@@ -109,7 +110,7 @@ section p {
 }
 
 .social-links img {
-    height: 50px;
+    height: 60px;
 }
 
 .social-links li {
@@ -183,10 +184,13 @@ audio {
     padding: 8px;
 }
 
-.soon-like {
-    max-width: 500px; 
-    margin-bottom: 20px;
-    box-shadow: 4px 4px 2px gray;
+#slider {
+    width: 100%;
+    max-width: 1288px;
+    height: 25vw;
+    max-height: 400px;
+    position: relative;
+    align-items: center;
 }
 
 .content-wrapper {
@@ -194,3 +198,18 @@ audio {
     flex-direction: column;
     align-items: center;
 }
+
+#slider img {
+    opacity: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 800ms;
+}
+
+#slider img.selected {
+    opacity: 1;
+}
+
