@@ -7,6 +7,7 @@
 header,
 section h2,
 section h3,
+section h4,
 form button {
     font-family: 'Rock Salt', cursive;
 }
@@ -27,6 +28,7 @@ header {
 header h1,
 section h2,
 section h3,
+section h4,
 form button {
     font-weight: normal;
     text-shadow: 2px 2px 2px #646464;
